@@ -1,0 +1,165 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0 auto;
+    /* font-size: 3vw; */
+}
+
+main {
+    min-height: 100%;
+}
+
+main::after {
+    content: "";
+    display: block;
+}
+
+/* HEADER */
+
+#logo {
+    width: 100%;
+}
+
+#navbar {
+    padding: 18px 30%;
+    box-shadow: 0px 5px 10px 0px #cac9c9;
+    position: relative;
+    z-index: 1;
+}
+
+#location {
+    background-color: #f1f1f1;
+}
+
+/* MAIN */
+/* FIRST SECTION */
+#first-sct {
+    text-align: center;
+}
+
+#location {
+    padding: 10px 0;
+}
+
+#presentation {
+    padding: 20px 30px;
+    padding-bottom: 50px;
+    background-color: #f7f7f7;
+}
+
+#presentation button {
+    border-radius: 20px;
+    padding: 10px;
+    background: linear-gradient(rgb(235, 124, 235), rgb(178, 79, 223));
+    color: white;
+    border: none;
+}
+
+/* SECOND SECTION */
+#second-sct {
+    margin: 40px 20px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    padding: 8px;
+    margin: 15px 0;
+    box-shadow: 0 5px 10px 0 lightgrey;
+    list-style: none;
+}
+
+.step-icon {
+    padding: 3px 10px;
+    color: grey
+}
+
+.step-number {
+    color: white;
+    background-color: rgb(178, 79, 223);
+    padding: 10px 12px;
+    border-radius: 40px;
+    font-size: 10px;
+    position: relative;
+    left: -22px;
+}
+
+/* RESTAU SECTION */
+#restau {
+    background-color: #f7f7f7;
+    padding: 30px 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 lightgrey;
+    margin: 20px 0;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    height: 180px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    line-height: 0.5;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgb(74, 74, 74);
+    position: relative;
+    bottom: 0;
+    padding: 10px 20px;
+}
+
+#logo-footer {
+    color: white;
+}
+
+#footer-list {
+    padding: 0;  
+}
+
+.list-item i {
+    font-size: 10px;
+}
+
+.list-item {
+    list-style: none;
+}
+
+.list-item a{
+    color: white;
+    text-decoration: none;
+}
+
+/*MENU A LA FRANCAISE */
+#menu-resto img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    border-radius: 40px 40px 0 0 ;
+    background-color: white;
+    position: relative;
+    top: -60px;
+}

@@ -4,42 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Bienvenue !</title>
 </head>
 <body>
     <header>
-        <nav>
-            <img src="/img/ohmyfood.png" alt="Logo">
+        <nav id="navbar">
+            <img id="logo" src="/img/ohmyfood.png" alt="Logo">
         </nav>
     </header>
     <main>
         <section id="first-sct">
             <div id="location">
-                <i class="fa fa-location"></i>
+                <i class="fa fa-location-dot"></i>
                 <adress>Paris, Belleville</adress> 
             </div>
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <div id="presentation">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <button>Explorer nos restaurants</button>
+            </div>
         </section>
         <section id="second-sct">
             <h2>Fonctionnement</h2>
-            <div id="steps">
-                <div class="step-item">
-                    <i class="fa fa-phone"></i>
+            <ol id="steps">
+                <li class="step-item">
+                    <i class="fa-solid fa-1 step-number"></i>
+                    <i class="fa-solid fa-mobile-screen-button step-icon"></i>
                     <p>Choisissez un restaurant</p>
-                </div>
-                <div class="step-item">
-                    <i class="fa fa-list"></i>
+                </li>
+                <li class="step-item">
+                    <i class="fa-solid fa-2 step-number"></i>
+                    <i class="fa fa-list step-icon"></i>
                     <p>Composez votre menu</p>
-                </div>
-                <div class="step-item">
-                    <i></i>
+                </li>
+                <li class="step-item">
+                    <i class="fa-solid fa-3 step-number"></i>
+                    <i class="fa-solid fa-store step-icon"></i>
                     <p>Dégustez au restaurant</p>
-                </div>
+                </li>
             </div>
         </section>
-        <section>
+        <section id="restau">
             <h2>Restaurants</h2>
             <article class="card">
                 <a href="">
@@ -49,7 +55,7 @@
                             <h4>La palette du goût</h4>
                             <p>Ménilmontant</p>
                         </div>
-                        <i class="fa fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </a>
             </article>
@@ -61,19 +67,19 @@
                             <h4>La note enchantée</h4>
                             <p>Charonne</p>
                         </div>
-                        <i class="fa fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </a>
             </article>
             <article class="card">
-                <a href="">
+                <a href="menu1.html">
                     <img src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
                     <div class="card-content">
                         <div class="card-title">
                             <h4>A la française</h4>
                             <p>Cité rouge</p>
                         </div>
-                        <i class="fa fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </a>
             </article>
@@ -85,36 +91,37 @@
                             <h4>Le délice des sens</h4>
                             <p>Folie-Méricourt</p>
                         </div>
-                        <i class="fa fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </a>
             </article>
         </section>
     </main>
     <footer>
-        <img src="" alt="">
-        <ul>
-            <li>
+        <h3 id="logo-footer">ohmyfood</h3>
+        <ul id="footer-list">
+            <li class="list-item">
                 <a href="">
-                <i class="fa fa-food"></i>
+                <i class="fa-solid fa-utensils"></i>   
                 Proposer un restaurant
                 </a>
             </li>
-            <li>
+            <li class="list-item">
                 <a href="">
-                    <i class="fa"></i>
+                    <i class="fa-solid fa-handshake-angle"></i>
                     Devenir partenaire
                 </a>
             </li>
-            <li>
+            <li class="list-item">
                 <a href="">Mentions légales</a>
             </li>
-            <li>
+            <li class="list-item">
                 <a href="">
                     Contact
                 </a>
             </li>
         </ul>
     </footer>
+    <script src="https://kit.fontawesome.com/d4b884c9cd.js" crossorigin="anonymous"></script>
 </body>
 </html>
