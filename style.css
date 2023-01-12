@@ -1,3 +1,5 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 *, ::before, ::after {
     box-sizing: border-box;
 }
@@ -5,7 +7,7 @@
 html, body {
     height: 100%;
     margin: 0 auto;
-    /* font-size: 3vw; */
+    font-family: "Robot", sans-serif;
 }
 
 main {
@@ -50,12 +52,19 @@ main::after {
     background-color: #f7f7f7;
 }
 
-#presentation button {
+.gradient-btn {
     border-radius: 20px;
     padding: 10px;
     background: linear-gradient(rgb(235, 124, 235), rgb(178, 79, 223));
     color: white;
     border: none;
+    box-shadow: 1px 3px 5px 2px lightgrey;
+
+}
+
+.gradient-btn:hover {
+    box-shadow: 1px 3px 7px 4px lightgrey;
+
 }
 
 /* SECOND SECTION */
@@ -114,12 +123,42 @@ main::after {
     height: 180px;
 }
 
+.card:hover {
+    box-shadow: 2px 4px 6px 0 lightgrey;
+}
 .card-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     line-height: 0.5;
+}
+
+.fa-heart {
+    font-size: x-large;
+}
+
+.heart-full {
+    position: absolute;
+    right: 50px;
+    color: transparent;
+    z-index: 1;
+    opacity: 0;
+    transition: background-image 2s;
+    background-image: linear-gradient(rgb(235, 124, 235), rgb(178, 79, 223));
+    background-clip: text;
+}
+
+.order {
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.order .gradient-btn {
+    width: 40vw;
+    text-align: center;
+    font-size: bold;
+    padding: 12px 0;
 }
 
 /* FOOTER */
@@ -132,6 +171,7 @@ footer {
 
 #logo-footer {
     color: white;
+    font-family: "Shrikhand", cursive;
 }
 
 #footer-list {
@@ -152,6 +192,9 @@ footer {
 }
 
 /*MENU A LA FRANCAISE */
+#menu-resto {
+    background-color: #f1f1f1;
+}
 #menu-resto img {
     width: 100%;
     object-fit: cover;
@@ -159,7 +202,143 @@ footer {
 
 .menu {
     border-radius: 40px 40px 0 0 ;
-    background-color: white;
+    background-color: #f1f1f1;
     position: relative;
     top: -60px;
+}
+
+.menu-title, .menu-cat {
+    padding: 0 20px;
+}
+
+.menu-title h2 {
+    font-family: "Shrikhand", cursive;
+}
+
+.menu-title i {
+    padding: 20px;
+}
+
+.menu-title, .menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-title .heart-full {
+    right: 20px;
+}
+.menu-item {
+    background-color: white;
+    border-radius: 20px;
+    padding: 0 10px;
+    margin: 10px 0;
+    box-shadow: 1px 1px 3px 0 lightgrey;
+    overflow: hidden;
+    transform: scale(0);
+    animation: itemappear .9s 0.5s linear forwards;
+}
+
+.menu-content h4, .menu-content p {
+    margin: 4px 0;
+}
+
+.menu-comp {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: -65px;
+}
+
+.price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 3vw;
+    font-weight: bold;
+}
+
+.menu-check {
+    width: 4rem;
+    background-color: rgb(131, 222, 206);
+    border-radius: 0 20px 20px 0;
+    color: rgb(131, 222, 206);
+    padding: 23px 10px;
+    position: relative;
+    right: -10px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item:hover .menu-comp {
+    animation: checking 0.5s ease-in forwards;
+}
+
+.check-icon {
+    background-color: white;
+    border-radius: 20px;
+    width: 1.6rem;
+    height: 1.6rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(360deg);
+}
+
+.menu-item:hover .check-icon {
+    animation: rotation 0.6s ease-in forwards;
+}
+/* ANIMATIONS */
+
+.heart-full:hover {
+    animation: fullheart 0.5s 0s ease-in forwards;
+}
+
+@keyframes fullheart {
+    0% {
+        color: transparent;
+        background-image: none;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+    100% {
+
+        opacity: 1;
+    }
+}
+
+@keyframes checking {
+    0% {
+        right: -65px;
+    }
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes itemappear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
