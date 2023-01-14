@@ -51,8 +51,7 @@ main {
         width: 100%;
     }
     &__goback {
-        background-color: $color_4;
-        border: none;
+        color: $color_3;
         position: absolute;
         left: 20px;
         font-size: large;
@@ -72,6 +71,7 @@ main {
     &__logo {
         color: $color_1;
         font-family: $font-family_2;
+        font-size: 18px;
     }
 }
 
@@ -85,6 +85,7 @@ main {
         a {
             color: $color_1;
             text-decoration: none;
+
         }
     }
 }
@@ -114,6 +115,7 @@ main {
     color: $color_1;
     border: none;
     box-shadow: 1px 3px 5px 2px $color_2;
+    cursor: pointer;
     &:hover {
         box-shadow: 1px 3px 7px 4px $color_2;
     }
@@ -185,6 +187,7 @@ main {
 
 .fa-heart {
     font-size: x-large;
+    cursor: pointer;
 }
 
 .heart-full {
@@ -197,7 +200,7 @@ main {
     background-image: linear-gradient($background-color_5, $background-color_4);
     background-clip: text;
     &:hover {
-        animation: fullheart 0.5s 0s ease-in forwards;
+        animation: fullheart 0.5s ease-in forwards;
     }
 }
 
@@ -228,6 +231,9 @@ main {
             right: 20px;
         }
     }
+    &--mod {
+        top: -170px;
+    }
 }
 
 .col {
@@ -237,7 +243,8 @@ main {
 }
 
 .menu {
-    padding: 0 20px;
+    padding: 5px 20px;
+    margin-bottom: 20px;
     h3 {
         text-transform: uppercase;
         font-weight: 100;
@@ -258,19 +265,27 @@ main {
         box-shadow: 1px 1px 3px 0 $color_2;
         overflow: hidden;
         transform: scaleY(0);
-        animation: itemappear .3s 0.5s linear forwards;
+        animation: itemappear .5s .5s linear forwards;
         &:hover {
             .menu__comp {
                 animation: checking 0.5s ease-in forwards;
             }
             .menu__check-icon {
-                animation: rotation 0.6s ease-in forwards;
+                animation: rotation 0.6s ease-in forwards;            
             }
         }
     }
     &__content {
+        white-space: nowrap;
+        overflow: hidden;
+        
         h4, p {
             margin: 4px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p {
+            font-size: 15px;
         }
     }
     &__comp {
@@ -310,7 +325,7 @@ main {
     }
 }
 
-@for $i from 1 to 9 {
+@for $i from 1 to 10 {
     .delay-#{$i} {
       animation-delay: #{$i/10}s;
     }
