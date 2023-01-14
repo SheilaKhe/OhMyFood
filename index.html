@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Bienvenue !</title>
+    <title>OhMyFood</title>
 </head>
 <body>
     <header>
-        <nav id="navbar">
-            <img id="logo" src="/img/ohmyfood.png" alt="Logo">
+        <nav class="navbar">
+            <img class="navbar__logo" src="/img/ohmyfood.png" alt="Logo">
         </nav>
     </header>
     <main>
-        <section id="first-sct">
+        <section id="section-1">
             <div id="location">
                 <i class="fa fa-location-dot"></i>
                 <adress>Paris, Belleville</adress> 
@@ -22,25 +22,25 @@
             <div id="presentation">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button class="gradient-btn">Explorer nos restaurants</button>
+                <button class="btn gradient-btn">Explorer nos restaurants</button>
             </div>
         </section>
-        <section id="second-sct">
+        <section id="section-2">
             <h2>Fonctionnement</h2>
-            <ol id="steps">
-                <li class="step-item">
-                    <i class="fa-solid fa-1 step-number"></i>
-                    <i class="fa-solid fa-mobile-screen-button step-icon"></i>
+            <ol id="steps" class="step">
+                <li class="step__item">
+                    <i class="fa-solid fa-1 step__number"></i>
+                    <i class="fa-solid fa-mobile-screen-button step__icon"></i>
                     <p>Choisissez un restaurant</p>
                 </li>
-                <li class="step-item">
-                    <i class="fa-solid fa-2 step-number"></i>
-                    <i class="fa fa-list step-icon"></i>
+                <li class="step__item">
+                    <i class="fa-solid fa-2 step__number"></i>
+                    <i class="fa fa-list step__icon"></i>
                     <p>Composez votre menu</p>
                 </li>
-                <li class="step-item">
-                    <i class="fa-solid fa-3 step-number"></i>
-                    <i class="fa-solid fa-store step-icon"></i>
+                <li class="step__item">
+                    <i class="fa-solid fa-3 step__number"></i>
+                    <i class="fa-solid fa-store step__icon"></i>
                     <p>Dégustez au restaurant</p>
                 </li>
             </div>
@@ -48,10 +48,10 @@
         <section id="restau">
             <h2>Restaurants</h2>
             <article class="card">
-                <a href="">
-                    <img src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
+                <a class="card__link" href="">
+                    <img class="card__img" src="img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                    <div class="card__content">
+                        <div class="card__title">
                             <h4>La palette du goût</h4>
                             <p>Ménilmontant</p>
                         </div>
@@ -61,10 +61,10 @@
                 </a>
             </article>
             <article class="card">
-                <a href="">
-                    <img src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
+                <a class="card__link" href="">
+                    <img class="card__img" src="img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                    <div class="card__content">
+                        <div class="card__title">
                             <h4>La note enchantée</h4>
                             <p>Charonne</p>
                         </div>
@@ -74,10 +74,10 @@
                 </a>
             </article>
             <article class="card">
-                <a href="menu1.html">
-                    <img src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
+                <a class="card__link" href="menu1.html">
+                    <img class="card__img" src="img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                    <div class="card__content">
+                        <div class="card__title">
                             <h4>A la française</h4>
                             <p>Cité rouge</p>
                         </div>
@@ -87,10 +87,10 @@
                 </a>
             </article>
             <article class="card">
-                <a href="">
-                    <img src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="card-title">
+                <a class="card__link" href="">
+                    <img class="card__img" src="img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                    <div class="card__content">
+                        <div class="card__title">
                             <h4>Le délice des sens</h4>
                             <p>Folie-Méricourt</p>
                         </div>
@@ -101,25 +101,25 @@
             </article>
         </section>
     </main>
-    <footer>
-        <h3 id="logo-footer">ohmyfood</h3>
-        <ul id="footer-list">
-            <li class="list-item">
+    <footer class="footer">
+        <h3 class="footer__logo">ohmyfood</h3>
+        <ul class="footerlist">
+            <li class="footerlist__item">
                 <a href="">
                 <i class="fa-solid fa-utensils"></i>   
                 Proposer un restaurant
                 </a>
             </li>
-            <li class="list-item">
+            <li class="footerlist__item">
                 <a href="">
                     <i class="fa-solid fa-handshake-angle"></i>
                     Devenir partenaire
                 </a>
             </li>
-            <li class="list-item">
+            <li class="footerlist__item">
                 <a href="">Mentions légales</a>
             </li>
-            <li class="list-item">
+            <li class="footerlist__item">
                 <a href="">
                     Contact
                 </a>

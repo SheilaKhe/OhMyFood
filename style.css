@@ -1,344 +1,424 @@
+/* VARIABLES */
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+/* STYLE */
 *, ::before, ::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
-    margin: 0 auto;
-    font-family: "Robot", sans-serif;
+  height: 100%;
+  margin: 0 auto;
+  font-family: "Robot", sans-serif;
 }
 
 main {
-    min-height: 100%;
+  min-height: 100%;
 }
-
 main::after {
-    content: "";
-    display: block;
+  content: "";
+  display: block;
 }
 
 /* HEADER */
-
-#logo {
-    width: 100%;
+.navbar {
+  padding: 18px 30%;
+  box-shadow: 0px 5px 10px 0px #cac9c9;
+  position: relative;
+  z-index: 1;
+}
+.navbar--arrow {
+  display: flex;
+}
+.navbar__logo {
+  width: 100%;
+}
+.navbar__goback {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  left: 20px;
+  font-size: large;
+}
+.navbar__goback:hover {
+  left: 18px;
 }
 
-#navbar {
-    padding: 18px 30%;
-    box-shadow: 0px 5px 10px 0px #cac9c9;
-    position: relative;
-    z-index: 1;
+/* FOOTER */
+.footer {
+  background-color: rgb(74, 74, 74);
+  position: relative;
+  bottom: 0;
+  padding: 10px 20px;
+}
+.footer__logo {
+  color: white;
+  font-family: "Shrikhand", cursive;
 }
 
-#location {
-    background-color: #f1f1f1;
+.footerlist {
+  padding: 0;
+}
+.footerlist__item {
+  list-style: none;
+}
+.footerlist__item i {
+  font-size: 10px;
+}
+.footerlist__item a {
+  color: white;
+  text-decoration: none;
 }
 
-/* MAIN */
+/* HOME */
 /* FIRST SECTION */
-#first-sct {
-    text-align: center;
+#section-1 {
+  text-align: center;
 }
 
 #location {
-    padding: 10px 0;
+  padding: 10px 0;
+  background-color: #f1f1f1;
 }
 
 #presentation {
-    padding: 20px 30px;
-    padding-bottom: 50px;
-    background-color: #f7f7f7;
+  padding: 20px 30px;
+  padding-bottom: 50px;
+  background-color: #f7f7f7;
 }
 
 .gradient-btn {
-    border-radius: 20px;
-    padding: 10px;
-    background: linear-gradient(rgb(235, 124, 235), rgb(178, 79, 223));
-    color: white;
-    border: none;
-    box-shadow: 1px 3px 5px 2px lightgrey;
-
+  border-radius: 20px;
+  padding: 10px;
+  background: linear-gradient(rgb(235, 124, 235), rgb(178, 79, 223));
+  color: white;
+  border: none;
+  box-shadow: 1px 3px 5px 2px lightgrey;
 }
-
 .gradient-btn:hover {
-    box-shadow: 1px 3px 7px 4px lightgrey;
-
+  box-shadow: 1px 3px 7px 4px lightgrey;
 }
 
 /* SECOND SECTION */
-#second-sct {
-    margin: 40px 20px;
+#section-2 {
+  margin: 40px 20px;
 }
 
-.step-item {
-    display: flex;
-    align-items: center;
-    background-color: #f7f7f7;
-    border-radius: 20px;
-    padding: 8px;
-    margin: 15px 0;
-    box-shadow: 0 5px 10px 0 lightgrey;
-    list-style: none;
+.step__item {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  padding: 8px;
+  margin: 15px 0;
+  box-shadow: 0 5px 10px 0 lightgrey;
+  list-style: none;
 }
-
-.step-icon {
-    padding: 3px 10px;
-    color: grey
+.step__number {
+  color: white;
+  background-color: rgb(178, 79, 223);
+  padding: 10px 12px;
+  border-radius: 40px;
+  font-size: 10px;
+  position: relative;
+  left: -22px;
 }
-
-.step-number {
-    color: white;
-    background-color: rgb(178, 79, 223);
-    padding: 10px 12px;
-    border-radius: 40px;
-    font-size: 10px;
-    position: relative;
-    left: -22px;
+.step__icon {
+  padding: 3px 10px;
+  color: grey;
 }
 
 /* RESTAU SECTION */
 #restau {
-    background-color: #f7f7f7;
-    padding: 30px 30px;
+  background-color: #f7f7f7;
+  padding: 30px 30px;
 }
 
 .card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px 0 lightgrey;
-    margin: 20px 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px 0 lightgrey;
+  margin: 20px 0;
 }
-
-.card a {
-    text-decoration: none;
-    color: black;
+.card__link {
+  text-decoration: none;
+  color: black;
 }
-
-.card img {
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-    object-fit: cover;
-    height: 180px;
+.card__img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 180px;
 }
-
+.card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  line-height: 0.5;
+}
 .card:hover {
-    box-shadow: 2px 4px 6px 0 lightgrey;
-}
-.card-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    line-height: 0.5;
+  box-shadow: 2px 4px 6px 0 lightgrey;
 }
 
 .fa-heart {
-    font-size: x-large;
+  font-size: x-large;
 }
 
 .heart-full {
-    position: absolute;
-    right: 50px;
-    color: transparent;
-    z-index: 1;
-    opacity: 0;
-    transition: background-image 2s;
-    background-image: linear-gradient(rgb(235, 124, 235), rgb(178, 79, 223));
-    background-clip: text;
+  position: absolute;
+  right: 50px;
+  color: transparent;
+  z-index: 1;
+  opacity: 0;
+  transition: background-image 2s;
+  background-image: linear-gradient(rgb(235, 124, 235), rgb(178, 79, 223));
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.heart-full:hover {
+  -webkit-animation: fullheart 0.5s 0s ease-in forwards;
+          animation: fullheart 0.5s 0s ease-in forwards;
 }
 
-.order {
-    text-align: center;
-    margin-top: 4vh;
-}
-
-.order .gradient-btn {
-    width: 40vw;
-    text-align: center;
-    font-size: bold;
-    padding: 12px 0;
-}
-
-/* FOOTER */
-footer {
-    background-color: rgb(74, 74, 74);
-    position: relative;
-    bottom: 0;
-    padding: 10px 20px;
-}
-
-#logo-footer {
-    color: white;
-    font-family: "Shrikhand", cursive;
-}
-
-#footer-list {
-    padding: 0;  
-}
-
-.list-item i {
-    font-size: 10px;
-}
-
-.list-item {
-    list-style: none;
-}
-
-.list-item a{
-    color: white;
-    text-decoration: none;
-}
-
-/*MENU A LA FRANCAISE */
+/* MENU PAGE */
 #menu-resto {
-    background-color: #f1f1f1;
+  background-color: #f1f1f1;
 }
 #menu-resto img {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menucard {
+  border-radius: 40px 40px 0 0;
+  background-color: #f1f1f1;
+  position: relative;
+  top: -60px;
+}
+.menucard__title {
+  padding: 0 20px;
+}
+.menucard__title h2 {
+  font-family: "Shrikhand", cursive;
+}
+.menucard__title i {
+  padding: 20px;
+}
+.menucard__title .heart-full {
+  right: 20px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .menu {
-    border-radius: 40px 40px 0 0 ;
-    background-color: #f1f1f1;
-    position: relative;
-    top: -60px;
+  padding: 0 20px;
+}
+.menu h3 {
+  text-transform: uppercase;
+  font-weight: 100;
+  margin: 6px 0;
+}
+.menu hr {
+  margin-right: 87%;
+  margin-top: 0;
+  background-color: rgb(131, 222, 206);
+  border: none;
+  height: 3px;
+}
+.menu__item {
+  background-color: white;
+  border-radius: 20px;
+  padding: 0 10px;
+  margin: 10px 0;
+  box-shadow: 1px 1px 3px 0 lightgrey;
+  overflow: hidden;
+  transform: scaleY(0);
+  -webkit-animation: itemappear 0.3s 0.5s linear forwards;
+          animation: itemappear 0.3s 0.5s linear forwards;
+}
+.menu__item:hover .menu__comp {
+  -webkit-animation: checking 0.5s ease-in forwards;
+          animation: checking 0.5s ease-in forwards;
+}
+.menu__item:hover .menu__check-icon {
+  -webkit-animation: rotation 0.6s ease-in forwards;
+          animation: rotation 0.6s ease-in forwards;
+}
+.menu__content h4, .menu__content p {
+  margin: 4px 0;
+}
+.menu__comp {
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: -65px;
+}
+.menu__price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 0 3vw;
+  font-weight: bold;
+}
+.menu__check {
+  width: 4rem;
+  background-color: rgb(131, 222, 206);
+  border-radius: 0 20px 20px 0;
+  color: rgb(131, 222, 206);
+  padding: 23px 10px;
+  position: relative;
+  right: -10px;
+  display: flex;
+  justify-content: center;
+}
+.menu__check-icon {
+  background-color: white;
+  border-radius: 20px;
+  width: 1.6rem;
+  height: 1.6rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(360deg);
 }
 
-.menu-title, .menu-cat {
-    padding: 0 20px;
+.delay-1 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
-.menu-title h2 {
-    font-family: "Shrikhand", cursive;
+.delay-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
-.menu-title i {
-    padding: 20px;
+.delay-3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
-.menu-title, .menu-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.delay-4 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
-.menu-title .heart-full {
-    right: 20px;
-}
-.menu-item {
-    background-color: white;
-    border-radius: 20px;
-    padding: 0 10px;
-    margin: 10px 0;
-    box-shadow: 1px 1px 3px 0 lightgrey;
-    overflow: hidden;
-    transform: scale(0);
-    animation: itemappear .9s 0.5s linear forwards;
+.delay-5 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
-.menu-content h4, .menu-content p {
-    margin: 4px 0;
+.delay-6 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
-.menu-comp {
-    display: flex;
-    align-items: center;
-    position: relative;
-    right: -65px;
+.delay-7 {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 
-.price {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin: 0 3vw;
-    font-weight: bold;
+.delay-8 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
-.menu-check {
-    width: 4rem;
-    background-color: rgb(131, 222, 206);
-    border-radius: 0 20px 20px 0;
-    color: rgb(131, 222, 206);
-    padding: 23px 10px;
-    position: relative;
-    right: -10px;
-    display: flex;
-    justify-content: center;
+.order {
+  text-align: center;
+  margin-top: 4vh;
+}
+.order .gradient-btn {
+  width: 40vw;
+  text-align: center;
+  font-size: bold;
+  padding: 12px 0;
 }
 
-.menu-item:hover .menu-comp {
-    animation: checking 0.5s ease-in forwards;
-}
-
-.check-icon {
-    background-color: white;
-    border-radius: 20px;
-    width: 1.6rem;
-    height: 1.6rem;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(360deg);
-}
-
-.menu-item:hover .check-icon {
-    animation: rotation 0.6s ease-in forwards;
-}
 /* ANIMATIONS */
-
-.heart-full:hover {
-    animation: fullheart 0.5s 0s ease-in forwards;
+@-webkit-keyframes fullheart {
+  0% {
+    color: transparent;
+    background-image: none;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
 @keyframes fullheart {
-    0% {
-        color: transparent;
-        background-image: none;
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    70% {
-        opacity: 0.7;
-    }
-    100% {
-
-        opacity: 1;
-    }
+  0% {
+    color: transparent;
+    background-image: none;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
+@-webkit-keyframes checking {
+  0% {
+    right: -65px;
+  }
+  100% {
+    right: 0;
+  }
+}
 @keyframes checking {
-    0% {
-        right: -65px;
-    }
-    100% {
-        right: 0;
-    }
+  0% {
+    right: -65px;
+  }
+  100% {
+    right: 0;
+  }
 }
-
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 @keyframes rotation {
-    0% {
-        transform: rotate(360deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
-
+@-webkit-keyframes itemappear {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
 @keyframes itemappear {
-    0% {
-        transform: scale(0);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}/*# sourceMappingURL=app1.css.map */
