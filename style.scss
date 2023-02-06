@@ -1,20 +1,18 @@
 /* VARIABLES */
-$color_1: white;
-$color_2: lightgrey;
-$color_3: black;
-$color_4: transparent;
-$color_5: rgb(131, 222, 206);
-$color_6: grey;
-$font-family_1: "Robot", sans-serif;
-$font-family_2: "Shrikhand", cursive;
-$background-color_1: #f1f1f1;
-$background-color_2: #f7f7f7;
-$background-color_3: white;
-$background-color_4: rgb(178, 79, 223);
-$background-color_5: rgb(235, 124, 235);
-$background-color_6: rgb(131, 222, 206);
-$background-color_7: rgb(74, 74, 74);
-
+$light: white;
+$lightgrey: lightgrey;
+$dark: black;
+$trans: transparent;
+$grey: grey;
+$lightdark: rgb(74, 74, 74);
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+$text: "Roboto", sans-serif;
+$title: "Shrikhand", cursive;
+$color1: #f1f1f1;
+$color2: #f7f7f7;
+$gradient: linear-gradient($secondary, $primary);
 
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
@@ -27,7 +25,7 @@ $background-color_7: rgb(74, 74, 74);
 html, body {
     height: 100%;
     margin: 0 auto;
-    font-family: $font-family_1;
+    font-family: $text;
 }
 
 main {
@@ -38,20 +36,47 @@ main {
     }
 }
 
+.title {
+    font-family: $title;
+}
+
+/* lOADER */
+.loader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    width: 100%;
+    opacity: 1;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.768);
+    animation: loadbg 5s ease-in forwards;
+    &__title {
+        color: transparent;
+        animation: loadtitle 1s ease-in forwards;
+    }
+}
+
+
 /* HEADER */
 .navbar {
     padding: 18px 30%;
     box-shadow: 0px 5px 10px 0px #cac9c9;
     position: relative;
     z-index: 1;
+    text-align: center;
     &--arrow {
         display: flex;
     }
     &__logo {
-        width: 100%;
+        width: 60%;
     }
     &__goback {
-        color: $color_3;
+        color: $dark;
         position: absolute;
         left: 20px;
         font-size: large;
@@ -64,13 +89,12 @@ main {
 
 /* FOOTER */
 .footer {
-    background-color: $background-color_7;
+    background-color: $lightdark;
     position: relative;
     bottom: 0;
     padding: 10px 20px;
     &__logo {
-        color: $color_1;
-        font-family: $font-family_2;
+        color: $light;
         font-size: 18px;
     }
 }
@@ -83,7 +107,7 @@ main {
             font-size: 10px;
         }
         a {
-            color: $color_1;
+            color: $light;
             text-decoration: none;
 
         }
@@ -99,47 +123,50 @@ main {
 
 #location {
     padding: 10px 0;
-    background-color: $background-color_1;
+    background-color: $color1;
 }
 
 #presentation {
     padding: 20px 30px;
     padding-bottom: 50px;
-    background-color: $background-color_2;
+    background-color: $color2;
 }
 
 .gradient-btn {
     border-radius: 20px;
     padding: 10px;
-    background: linear-gradient($background-color_5, $background-color_4);
-    color: $color_1;
+    background: $gradient;
+    color: $light;
     border: none;
-    box-shadow: 1px 3px 5px 2px $color_2;
+    box-shadow: 1px 3px 5px 2px $lightgrey;
+    text-decoration: none;
     cursor: pointer;
+    opacity: 1;
     &:hover {
-        box-shadow: 1px 3px 7px 4px $color_2;
+        box-shadow: 1px 3px 7px 4px $lightgrey;
+        opacity: 0.9;
     }
 }
 
 /* SECOND SECTION */
 #section-2 {
-    margin: 40px 20px;
+    margin: 40px 5%;
 }
 
 .step {
     &__item {
         display: flex;
         align-items: center;
-        background-color: $background-color_2;
+        background-color: $color2;
         border-radius: 20px;
         padding: 8px;
         margin: 15px 0;
-        box-shadow: 0 5px 10px 0 $color_2;
+        box-shadow: 0 5px 10px 0 $lightgrey;
         list-style: none;
     }
     &__number {
         color: white;
-        background-color: $background-color_4;
+        background-color: $primary;
         padding: 10px 12px;
         border-radius: 40px;
         font-size: 10px;
@@ -148,24 +175,38 @@ main {
     }
     &__icon {
         padding: 3px 10px;
-        color: $color_6;
+        color: $grey;
     }
 }
 
+@media screen and (min-width: 768px) {
+    .step {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &__item {
+            margin: 5px 15px;
+            padding: 10px 5px;
+            width: 20rem;
+        }
+    }
+}
+
+
 /* RESTAU SECTION */
-#restau {
-    background-color: $background-color_2;
-    padding: 30px 30px;
+.restau {
+    background-color: $color2;
+    padding: 30px 5%;
 }
 
 .card {
-    background-color: $background-color_3;
+    background-color: $light;
     border-radius: 10px;
-    box-shadow: 0 2px 5px 0 $color_2;
+    box-shadow: 0 2px 5px 0 $lightgrey;
     margin: 20px 0;
     &__link {
         text-decoration: none;
-        color: $color_3;
+        color: $dark;
     }
     &__img {
         width: 100%;
@@ -180,10 +221,18 @@ main {
         padding: 0 20px;
         line-height: 0.5;
     }
+    &__heart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+    }
     &:hover {
-        box-shadow: 2px 4px 6px 0 $color_2;
+        box-shadow: 2px 4px 6px 0 $lightgrey;
     }
 }
+
 
 .fa-heart {
     font-size: x-large;
@@ -192,12 +241,11 @@ main {
 
 .heart-full {
     position: absolute;
-    right: 50px;
-    color: $color_4;
+    color: $trans;
     z-index: 1;
     opacity: 0;
     transition: background-image 2s;
-    background-image: linear-gradient($background-color_5, $background-color_4);
+    background-image: $gradient;
     background-clip: text;
     &:hover {
         animation: fullheart 0.5s ease-in forwards;
@@ -207,23 +255,22 @@ main {
 
 /* MENU PAGE */
 #menu-resto {
-    background-color: $background-color_1;
+    background-color: $white;
     img {
         width: 100%;
+        max-width: 100%;
+        max-height: 50vh;
         object-fit: cover;
     }
 }
 
 .menucard {
     border-radius: 40px 40px 0 0 ;
-    background-color: $background-color_1;
+    background-color: $color1;
     position: relative;
-    top: -60px;
+    top: -3rem;
     &__title {
         padding: 0 20px;
-        h2 {
-            font-family: $font-family_2;
-        }
         i{
             padding: 20px;
         }
@@ -235,6 +282,7 @@ main {
         top: -170px;
     }
 }
+
 
 .col {
     display: flex;
@@ -253,16 +301,16 @@ main {
     hr {
         margin-right: 87%;
         margin-top: 0;
-        background-color: $background-color_6;
+        background-color: $tertiary;
         border: none;
         height: 3px;
     }
     &__item {
-        background-color: $background-color_3;
+        background-color: $light;
         border-radius: 20px;
         padding: 0 10px;
         margin: 10px 0;
-        box-shadow: 1px 1px 3px 0 $color_2;
+        box-shadow: 1px 1px 3px 0 $lightgrey;
         overflow: hidden;
         transform: scaleY(0);
         animation: itemappear .5s .5s linear forwards;
@@ -303,9 +351,9 @@ main {
     }
     &__check {
         width: 4rem;
-        background-color: $background-color_6;
+        background-color: $tertiary;
         border-radius: 0 20px 20px 0;
-        color: $color_5;
+        color: $tertiary;
         padding: 23px 10px;
         position: relative;
         right: -10px;
@@ -313,7 +361,7 @@ main {
         justify-content: center;
     }
     &__check-icon {
-        background-color: $background-color_3;
+        background-color: $light;
         border-radius: 20px;
         width: 1.6rem;
         height: 1.6rem;
@@ -343,6 +391,25 @@ main {
 }
 
 /* ANIMATIONS */
+@keyframes loadbg {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -3;
+    }
+}
+@keyframes loadtitle {
+    0% {
+        color: transparent;
+    }
+
+    100% {
+        color: black;
+    }
+}
 @keyframes fullheart {
 	0% {
 		color: transparent;
@@ -383,3 +450,38 @@ main {
 		transform: scaleY(1);
 	}
 }
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+    .restau {
+        &__cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .card {
+        width: 18rem;
+        margin: 10px 20px;
+    }
+}
+@media screen and (min-width: 950px) {
+    .menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        }
+}
+@media screen and (min-width: 1200px) {
+    .restau{
+        &__cards {
+            flex-wrap: nowrap;
+        }
+    }
+
+    .menucard {
+        margin: 0 10vw;
+    }
+}
+
