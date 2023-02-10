@@ -54,12 +54,32 @@ main {
     top: 0;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.768);
-    animation: loadbg 5s ease-in forwards;
-    &__title {
-        color: transparent;
-        animation: loadtitle 1s ease-in forwards;
+    animation: loadbg 6s ease-in forwards;
+
+    &__point {
+        &:first-child{
+            background-color: $tertiary;
+        }
+        &:nth-child(2) {
+            background-color: $secondary;
+        }
+        &:nth-child(3) {
+            background-color: $primary;
+        }
+        animation: loadappear 2s ease-in-out infinite;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        margin: 0 10px;
     }
 }
+
+@for $i from 1 to 3 {
+    .l-#{$i} {
+      animation-delay: #{$i/1.8}s;
+    }
+  }
+
 
 
 /* HEADER */
@@ -71,9 +91,11 @@ main {
     text-align: center;
     &--arrow {
         display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &__logo {
-        width: 60%;
+        width: 180px;
     }
     &__goback {
         color: $dark;
@@ -115,7 +137,6 @@ main {
 }
 
 /* HOME */
-
 /* FIRST SECTION */
 #section-1 {
     text-align: center;
@@ -163,6 +184,12 @@ main {
         margin: 15px 0;
         box-shadow: 0 5px 10px 0 $lightgrey;
         list-style: none;
+        &:hover {
+            background-color: rgba(237, 228, 243, 0.768);
+            i.step__icon {
+                color: $primary;
+            }
+        }
     }
     &__number {
         color: white;
@@ -255,7 +282,7 @@ main {
 
 /* MENU PAGE */
 #menu-resto {
-    background-color: $white;
+    background-color: $light;
     img {
         width: 100%;
         max-width: 100%;
@@ -383,12 +410,65 @@ main {
     text-align: center;
     margin-top: 4vh;
     .gradient-btn {
-        width: 40vw;
+        width: 15rem;
         text-align: center;
         font-size: bold;
         padding: 12px 0;
     }
 }
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+    .restau {
+        &__cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .card {
+        width: 18rem;
+        margin: 10px 20px;
+    }
+}
+@media screen and (min-width: 950px) {
+
+
+    .menucard {
+        margin: 0 20vw;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .restau{
+        &__cards {
+            flex-wrap: nowrap;
+        }
+    }
+
+    .menucard {
+        margin: 0 30vw;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .menucard {
+        margin: unset;
+
+    }
+
+    .menu-list {
+        display: flex;
+        justify-content: center;
+    }
+    .menu {
+        &__item {
+            width: 26rem;
+
+        }
+    }
+
+}
+
+
 
 /* ANIMATIONS */
 @keyframes loadbg {
@@ -401,15 +481,16 @@ main {
         z-index: -3;
     }
 }
-@keyframes loadtitle {
-    0% {
-        color: transparent;
-    }
 
+@keyframes loadappear {
+    0% {
+        opacity: 0;
+    }
     100% {
-        color: black;
+        opacity: 1;
     }
 }
+
 @keyframes fullheart {
 	0% {
 		color: transparent;
@@ -449,39 +530,5 @@ main {
 	100% {
 		transform: scaleY(1);
 	}
-}
-
-/* MEDIA QUERIES */
-@media screen and (min-width: 768px) {
-    .restau {
-        &__cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-    }
-    .card {
-        width: 18rem;
-        margin: 10px 20px;
-    }
-}
-@media screen and (min-width: 950px) {
-    .menu-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        }
-}
-@media screen and (min-width: 1200px) {
-    .restau{
-        &__cards {
-            flex-wrap: nowrap;
-        }
-    }
-
-    .menucard {
-        margin: 0 10vw;
-    }
 }
 
