@@ -1,6 +1,6 @@
 /* MENU PAGE */
 #menu-resto {
-    background-color: $light;
+    background-color: $color1;
     img {
         width: 100%;
         max-width: 100%;
@@ -129,28 +129,47 @@
     }
 }
 
-// MEDIA QUERIES
-@media screen and (min-width: 1200px) {
-    .menucard {
-        margin: 0 30vw;
+
+@media screen and (min-width: 768px) {
+    .menu{
+        &__itemlist {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__item {
+            margin: 20px 10px;
+            width: 20rem;
+ 
+        }
     }
 }
 
+@media screen and (min-width: 900px) {
+    .menu {
+        &__itemlist {
+            flex-wrap: nowrap;
+        }
+        &__item {
+            width: 24rem;
+        }
+    }
+}
 @media screen and (min-width: 1400px) {
-    .menucard {
-        margin: unset;
+    // .menucard {
+    //     margin: unset;
 
+    // }
+    .menu {
+        &__itemlist {
+            display: block;
+        }
+        &__item {
+            margin: 10px 0;
+        }
     }
 
     .menu-list {
         display: flex;
         justify-content: center;
     }
-    .menu {
-        &__item {
-            width: 26rem;
-
-        }
-    }
-
 }

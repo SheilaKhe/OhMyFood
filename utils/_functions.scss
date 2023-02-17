@@ -1,5 +1,5 @@
 // LOADER
-// Pour que les points de suspension s'anime les uns après les autres
+// Pour que les points de suspension s'animent les uns après les autres
 @for $i from 1 to 3 {
     .l-#{$i} {
       animation-delay: #{$i/1.8}s;
@@ -7,7 +7,7 @@
   }
 
 // MENU
-// Pour que les éléments du menu s'affiche les uns après les autres 
+// Pour que les éléments du menu s'affichent les uns après les autres 
 @for $i from 1 to 10 {
   .delay-#{$i} {
     animation-delay: #{$i/10}s;

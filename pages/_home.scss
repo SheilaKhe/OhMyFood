@@ -1,5 +1,5 @@
 /* HOME */
-// LOADER
+/* lOADER */
 .loader {
     position: fixed;
     display: flex;
@@ -55,6 +55,9 @@
 }
 
 .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__item {
         display: flex;
         align-items: center;
@@ -64,6 +67,7 @@
         margin: 15px 0;
         box-shadow: 0 5px 10px 0 $lightgrey;
         list-style: none;
+        width: 18rem;
         &:hover {
             background-color: rgba(237, 228, 243, 0.768);
             i.step__icon {
@@ -94,20 +98,27 @@
 
 
 // MEDIA QUERIES
-@media screen and (min-width: 950px) {
-    .menucard {
-        margin: 0 20vw;
-    }
-}
+@media screen and (min-width: 768px) {
 
-
-@media screen and (min-width: 1200px) {
     .restau{
+        
         &__cards {
-            flex-wrap: nowrap;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            .card{
+                width: 18rem;
+                margin: 20px 20px;
+            }
         }
     }
 
 }
 
-
+@media screen and (min-width: 950px) {
+    .step {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
