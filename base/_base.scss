@@ -1,0 +1,17 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0 auto;
+    font-family: $text;
+}
+
+main {
+    min-height: 100%;
+    &::after{
+        content: "";
+        display: block;
+    }
+}

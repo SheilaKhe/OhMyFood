@@ -1,0 +1,113 @@
+/* HOME */
+// LOADER
+.loader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    width: 100%;
+    opacity: 1;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.768);
+    animation: loadbg 6s ease-in forwards;
+
+    &__point {
+        &:first-child{
+            background-color: $tertiary;
+        }
+        &:nth-child(2) {
+            background-color: $secondary;
+        }
+        &:nth-child(3) {
+            background-color: $primary;
+        }
+        animation: loadappear 2s ease-in-out infinite;
+        width: 20px;
+        height: 20px;
+        border-radius: 30px;
+        margin: 0 10px;
+    }
+}
+
+/* FIRST SECTION */
+#section-1 {
+    text-align: center;
+}
+
+#location {
+    padding: 10px 0;
+    background-color: $color1;
+}
+
+#presentation {
+    padding: 20px 30px;
+    padding-bottom: 50px;
+    background-color: $color2;
+}
+
+/* SECOND SECTION */
+#section-2 {
+    margin: 40px 5%;
+}
+
+.step {
+    &__item {
+        display: flex;
+        align-items: center;
+        background-color: $color2;
+        border-radius: 20px;
+        padding: 8px;
+        margin: 15px 0;
+        box-shadow: 0 5px 10px 0 $lightgrey;
+        list-style: none;
+        &:hover {
+            background-color: rgba(237, 228, 243, 0.768);
+            i.step__icon {
+                color: $primary;
+            }
+        }
+    }
+    &__number {
+        color: white;
+        background-color: $primary;
+        padding: 10px 12px;
+        border-radius: 40px;
+        font-size: 10px;
+        position: relative;
+        left: -22px;
+    }
+    &__icon {
+        padding: 3px 10px;
+        color: $grey;
+    }
+}
+
+/* RESTAU SECTION */
+.restau {
+    background-color: $color2;
+    padding: 30px 5%;
+}
+
+
+// MEDIA QUERIES
+@media screen and (min-width: 950px) {
+    .menucard {
+        margin: 0 20vw;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .restau{
+        &__cards {
+            flex-wrap: nowrap;
+        }
+    }
+
+}
+
+

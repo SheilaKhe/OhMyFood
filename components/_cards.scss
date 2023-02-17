@@ -1,0 +1,33 @@
+.card {
+    background-color: $light;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 $lightgrey;
+    margin: 20px 0;
+    &__link {
+        text-decoration: none;
+        color: $dark;
+    }
+    &__img {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+        height: 180px;
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        line-height: 0.5;
+    }
+    &__heart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+    }
+    &:hover {
+        box-shadow: 2px 4px 6px 0 $lightgrey;
+    }
+}

@@ -1,0 +1,27 @@
+/* FOOTER */
+.footer {
+    background-color: $lightdark;
+    position: relative;
+    bottom: 0;
+    padding: 10px 20px;
+    &__logo {
+        color: $light;
+        font-size: 18px;
+    }
+}
+
+.footerlist {
+    padding: 0;  
+    &__item {
+        list-style: none;
+        i{
+            font-size: 10px;
+        }
+        a {
+            color: $light;
+            text-decoration: none;
+
+        }
+    }
+}
+

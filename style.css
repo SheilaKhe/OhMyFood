@@ -434,7 +434,7 @@ main::after {
 .order .gradient-btn {
   width: 15rem;
   text-align: center;
-  font-size: bold;
+  font-weight: bold;
   padding: 12px 0;
 }
 

@@ -1,0 +1,63 @@
+/* ANIMATIONS */
+@keyframes loadbg {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -3;
+    }
+}
+
+@keyframes loadappear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fullheart {
+	0% {
+		color: transparent;
+		background-image: none;
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	70% {
+		opacity: 0.7;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes checking {
+	0% {
+		right: -65px;
+	}
+	100% {
+		right: 0;
+	}
+}
+@keyframes rotation {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes itemappear {
+	0% {
+		transform: scaleY(0);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+

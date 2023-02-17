@@ -1,0 +1,7 @@
+.gradient-btn {
+    @include gradient-btn;
+    &:hover {
+        box-shadow: 1px 3px 7px 4px $lightgrey;
+        opacity: 0.9;
+    }
+}

@@ -1,0 +1,17 @@
+.fa-heart {
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.heart-full {
+    position: absolute;
+    color: $trans;
+    z-index: 1;
+    opacity: 0;
+    transition: background-image 2s;
+    background-image: $gradient;
+    background-clip: text;
+    &:hover {
+        animation: fullheart 0.5s ease-in forwards;
+    }
+}
