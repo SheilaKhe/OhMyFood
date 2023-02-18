@@ -58,6 +58,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1450px;
+
     &__item {
         display: flex;
         align-items: center;
